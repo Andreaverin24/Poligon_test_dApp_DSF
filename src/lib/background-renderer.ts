@@ -26,6 +26,8 @@ export type ThreeLinesOptions = {
     lookAt: { x: number; y: number; z: number };
     rootRotation: { x: number; y: number; z: number };
     rootPosition: { x: number; y: number; z: number };
+
+    neverPauseOnHidden?: boolean;
 };
 
 export const DEFAULT_THREE_LINES_OPTIONS: ThreeLinesOptions = {
@@ -114,7 +116,12 @@ export class BackgroundRenderer {
         this.resize();
 
         window.addEventListener("resize", this.handleResize, { passive: true });
-        document.addEventListener("visibilitychange", this.handleVisibility);
+        if (!this.opts.neverPauseOnHidden) {
+            document.addEventListener(
+                "visibilitychange",
+                this.handleVisibility
+            );
+        }
     }
 
     playAnimation() {
@@ -137,7 +144,12 @@ export class BackgroundRenderer {
     dispose() {
         this.stopAnimation();
         window.removeEventListener("resize", this.handleResize);
-        document.removeEventListener("visibilitychange", this.handleVisibility);
+        if (!this.opts.neverPauseOnHidden) {
+            document.removeEventListener(
+                "visibilitychange",
+                this.handleVisibility
+            );
+        }
         this.meshes.forEach((m) => this.root.remove(m));
         this.material.dispose();
         this.renderer.dispose();
