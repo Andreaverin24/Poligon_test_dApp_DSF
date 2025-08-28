@@ -1,0 +1,11 @@
+.modal__button-container button.min-w-\[200px\] {
+    min-width: 228px;
+    padding: 16px 18px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .back-button__container button {
+        width: 100%;
+    }
+}
