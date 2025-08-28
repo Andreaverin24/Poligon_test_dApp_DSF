@@ -1,0 +1,25 @@
+{
+  "name": "@dsf/security-toolkit",
+  "version": "1.0.0",
+  "description": "🛡️ DSF Security Toolkit — Защита API, HMAC, SpoofGuard, Honeypots, Telegram WatchDog",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./index.js",
+      "import": "./index.ts"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch"
+  },
+  "keywords": ["security", "hmac", "express", "spoof", "honeypot", "telegram", "dsf"],
+  "author": "Andrei Averin",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
