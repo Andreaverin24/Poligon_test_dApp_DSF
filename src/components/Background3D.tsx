@@ -13,49 +13,32 @@ export default function Background3D() {
             ...DEFAULT_THREE_LINES_OPTIONS,
 
             // -- Настройки геометрии и плотности --
-            linesNumber: 100, // Количество линий
-            linesLength: 2600, // Длина линий
-            vertexPerLines: 360, // Увеличьте количество точек для плавных волн
-            linesPadding: 14, // Расстояние между линиями
+            linesNumber: 300,
+            linesLength: 3500,
+            vertexPerLines: 360,
+            linesPadding: 25,
 
             // -- Настройки анимации и скорости --
-            slowFactor: 1.0, // Общая скорость анимации
-            waveAmplitude: 16.0, // Высота волн. Чем больше, тем сильнее эффект
-            waveFrequency: 0.009, // Частота волн. Меньше = более растянутые волны
-            waveSpeed: 0.85, // Скорость движения волн
-            wavePhase: 14.0, // Фазовый сдвиг для узора
-            waveOffset: 0.6, // Сдвиг для создания "ряби"
+            slowFactor: 0.6,
+            waveAmplitude: 60.0,
+            waveFrequency: 0.006,
+            waveSpeed: 0.55,
+            wavePhase: 60.0,
+            waveOffset: 0.001,
 
             // -- Настройки внешнего вида --
-            color: 0x7ea2ff, // Цвет линий
-            baseAlpha: 0.92, // Базовая прозрачность
+            baseAlpha: 1.0,
+            color: 0xc3d3f9,
 
             // -- Настройки камеры и сцены --
-            cameraFov: 45, // Угол обзора
-            cameraPos: {
-                // Позиция камеры
-                x: -500,
-                y: 100,
-                z: 1000,
-            },
-            lookAt: {
-                // Точка, на которую смотрит камера
-                x: -250,
-                y: 0,
-                z: 0,
-            },
-            rootRotation: {
-                // Поворот всей сцены
-                x: 15,
-                y: -5,
-                z: 25,
-            },
-            rootPosition: {
-                // Сдвиг всей сцены
-                x: -50,
-                y: 0,
-                z: -200,
-            },
+            cameraFov: 450,
+            cameraPos: { x: 0, y: 60, z: 45 },
+            lookAt: { x: 0, y: 0, z: 0 },
+            
+            rootRotation: { x: 15, y: -55, z: 0 },
+            rootPosition: { x: -100, y: -100, z: -800 },
+
+            neverPauseOnHidden: true,
         });
 
         bg.playAnimation();
@@ -70,3 +53,4 @@ export default function Background3D() {
         />
     );
 }
+
