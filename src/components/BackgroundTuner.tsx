@@ -66,6 +66,8 @@ export default function BackgroundTuner() {
 
         rootRotation: { x: 15, y: -55, z: 0 },
         rootPosition: { x: -100, y: -100, z: -800 },
+
+        neverPauseOnHidden: true,
     }));
 
     // чтобы не пересоздавать движок на каждый тик — дебаунсим изменения
@@ -377,4 +379,5 @@ export default function BackgroundTuner() {
         </>
     );
 }
+
 
