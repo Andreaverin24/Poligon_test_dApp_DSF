@@ -45,27 +45,27 @@ export default function BackgroundTuner() {
     const [opts, setOpts] = useState<Opts>(() => ({
         ...DEFAULTS,
         // мягкий старт под «ткань»
-        linesNumber: 52,
-        linesLength: 2800,
+        linesNumber: 300,
+        linesLength: 3500,
         vertexPerLines: 360,
-        linesPadding: 12,
+        linesPadding: 25,
 
-        slowFactor: 1.0,
-        waveAmplitude: 16.0,
-        waveFrequency: 0.009,
-        waveSpeed: 0.85,
-        wavePhase: 14.0,
-        waveOffset: 0.6,
+        slowFactor: 0.6,
+        waveAmplitude: 60.0,
+        waveFrequency: 0.006,
+        waveSpeed: 0.55,
+        wavePhase: 60.0,
+        waveOffset: 0.001,
 
-        baseAlpha: 0.32,
-        color: 0x7ea2ff,
+        baseAlpha: 1.0,
+        color: 0xc3d3f9,
 
-        cameraFov: 45,
-        cameraPos: { x: -22, y: 26, z: 150 },
+        cameraFov: 450,
+        cameraPos: { x: 0, y: 60, z: 45 },
         lookAt: { x: 0, y: 0, z: 0 },
 
-        rootRotation: { x: -14, y: 32, z: -8 },
-        rootPosition: { x: -30, y: -8, z: 0 },
+        rootRotation: { x: 15, y: -55, z: 0 },
+        rootPosition: { x: -100, y: -100, z: -800 },
     }));
 
     // чтобы не пересоздавать движок на каждый тик — дебаунсим изменения
@@ -377,3 +377,4 @@ export default function BackgroundTuner() {
         </>
     );
 }
+
