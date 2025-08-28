@@ -1,0 +1,12 @@
+// assets/svg/wallets/safepal.ts
+
+const safepalSvg = `
+<svg viewBox="0 0 2500 2500" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <path d="M1096,0c-76,0-149,30-203,84L48,929c-32,32-48,74-48,116s16,84,48,116l554,554V735
+    c0-73,59-132,132-132c309,0,1062,0,1164,0L2500,1H1096V0z" fill="#4A21EF"/>
+  <path d="M602,1898h1164c73,0,132-59,132-132V786l554,554c32,32,48,74,48,116s-16,84-48,116l-845,845
+    c-54,54-127,84-203,84H0l602-602V1898z" fill="#4A21EF"/>
+</svg>
+`;
+
+export default safepalSvg;
