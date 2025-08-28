@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="version" content="<%= APP_VERSION %>" />
+        <meta
+            name="description"
+            content="Decentralized Application of DSF. Earn, borrow and profit share with DSF."
+        />
+        <meta name="robots" content="index, follow" />
+        <meta
+            name="keywords"
+            content="DSF, DeFi, staking, earning, borrowing, crypto, Web3, yield"
+        />
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+        <!-- Title -->
+        <title>DSF.Finance App</title>
+
+        <!-- Favicons -->
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="96x96"
+            href="/favicon/favicon-96x96.png"
+        />
+        <link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+        <!-- Apple & Manifest -->
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/favicon/apple-touch-icon.png"
+        />
+        <link rel="manifest" href="/favicon/site.webmanifest" />
+        <meta name="apple-mobile-web-app-title" content="DSF.Finance" />
+
+        <link rel="canonical" href="<%= APP_DOMAIN %>" />
+
+        <!-- Open Graph / SEO -->
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="DSF.Finance" />
+        <meta property="og:site_name" content="DSF.Finance" />
+        <meta
+            property="og:description"
+            content="Decentralized finance made easy. Earn and borrow with DSF strategies."
+        />
+        <meta property="og:image" content="/og-image.jpg" />
+        <meta property="og:url" content="<%= APP_DOMAIN %>" />
+        <meta property="og:locale" content="en_US" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="DSF.Finance" />
+        <meta
+            name="twitter:description"
+            content="Decentralized finance made easy. Earn and borrow with DSF strategies."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
+
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-HG0G9WD3D3"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-HG0G9WD3D3");
+        </script>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+            (function (m, e, t, r, i, k, a) {
+                m[i] =
+                    m[i] ||
+                    function () {
+                        (m[i].a = m[i].a || []).push(arguments);
+                    };
+                m[i].l = 1 * new Date();
+                for (var j = 0; j < document.scripts.length; j++) {
+                    if (document.scripts[j].src === r) {
+                        return;
+                    }
+                }
+                (k = e.createElement(t)),
+                    (a = e.getElementsByTagName(t)[0]),
+                    (k.async = 1),
+                    (k.src = r),
+                    a.parentNode.insertBefore(k, a);
+            })(
+                window,
+                document,
+                "script",
+                "https://mc.yandex.ru/metrika/tag.js",
+                "ym"
+            );
+
+            ym(97898855, "init", {
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true,
+                ecommerce: "dataLayer",
+            });
+        </script>
+        <!-- /Yandex.Metrika counter -->
+    </head>
+    <body>
+        <div class="diagonal-stripe-right z-index: 0"></div>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <div id="root"></div>
+        <script type="module" src="/src/index.tsx"></script>
+        <!-- Yandex Metrika (noscript fallback) -->
+        <noscript>
+            <img
+                src="https://mc.yandex.ru/watch/97898855"
+                style="position: absolute; left: -9999px"
+                alt=""
+            />
+        </noscript>
+    </body>
+</html>
