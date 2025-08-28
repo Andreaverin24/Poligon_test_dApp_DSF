@@ -1,0 +1,59 @@
+.premium,
+.smart,
+.default,
+.transfered,
+.standard,
+.completed,
+.failed,
+.pending,
+.cancelled {
+  border-radius: 16px;
+  padding: 4px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+.premium {
+  background-color: rgba(226, 57, 254, 0.12);
+  color: #E239FE;
+}
+
+.smart {
+  background-color: rgba(85, 221, 131, 0.12);
+  color: #55DD83;
+}
+
+.default {
+  background-color: rgba(57, 86, 254, 0.12);
+  color: #3956FE;
+}
+
+.transfered {
+  background-color: rgba(201, 20, 250, 0.12);
+  color: #930fb6;
+}
+
+.standard {
+  background-color: rgba(57, 86, 254, 0.12);
+  color: #3956FE;
+}
+
+.completed,
+.failed,
+.pending,
+.cancelled {
+  background-color: rgba(85, 221, 131, 0.12);
+  color: #55DD83;
+}
+
+.transaction-currency svg {
+  height: 16px;
+  width: 16px;
+}
+
+.button-cell button {
+  padding: 10px 13px;
+  min-width: unset;
+  border-radius: 12px;
+}

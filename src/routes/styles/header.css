@@ -1,0 +1,11 @@
+.button__container-mobile button {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    min-width: 120px;
+    border-radius: 12px;
+}
+
+.button__container button {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
