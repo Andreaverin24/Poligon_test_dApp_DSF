@@ -1,0 +1,243 @@
+/* index.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    font-size: 16px;
+    line-height: 26px;
+    background-color: #f3f2f9;
+}
+
+html,
+body,
+#root {
+    @apply text-default;
+}
+
+html,
+body,
+#root,
+div {
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+#root::-webkit-scrollbar,
+div::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@layer base {
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}
+
+header.filled {
+    background: linear-gradient(#fbfbfd 50%, #e0f3ff);
+    box-shadow: 8px 8px 24px 0 rgba(175, 195, 229, 0.31);
+}
+
+header {
+    transition:
+        background 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+div[data-testid="flowbite-tooltip-target"] {
+    width: 100%;
+}
+
+.mixed-currency svg:not(:first-child) {
+    margin-left: -4px;
+}
+
+@keyframes blinkAnimation {
+    0% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    70% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.blinking-dot {
+    animation: blinkAnimation 1s linear infinite;
+    animation-direction: alternate;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.online-span {
+    line-height: 20px;
+    font-weight: 600;
+    padding: 2px 10px;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(115, 212, 22, 0.08);
+    border-radius: 12px;
+    /* padding: 2px 16px; */
+    /* font-size: 16px; */
+    color: #73d516;
+    cursor: default;
+}
+
+.tx-fixs {
+    margin-top: 0px;
+}
+
+.tx-fixs2 {
+    padding-left: 6px;
+}
+
+.tx-fixs3 {
+    padding-left: 8px;
+}
+
+.tx-fixs4 {
+    margin-top: 8px;
+}
+
+/* блик анимация */
+@keyframes backgroundShine {
+    0% {
+        background-position: 250% 0;
+        opacity: 1;
+    }
+    100% {
+        background-position: -250% 0;
+        opacity: 1;
+    }
+}
+
+.shine-bg {
+    background-image: linear-gradient(
+        115deg,
+        rgba(255, 255, 255, 0) 45%,
+        rgba(255, 255, 255, 0.438) 50%,
+        rgba(255, 255, 255, 0) 55%
+    );
+    background-repeat: no-repeat;
+    background-size:
+        200% 100%,
+        100% 100%;
+    background-position:
+        250% 0,
+        center;
+    animation: backgroundShine 3s linear forwards;
+    pointer-events: none;
+    background-origin: border-box;
+    background-clip: border-box;
+    border: 1px solid transparent;
+}
+
+@keyframes backgroundShineFullButton {
+    0% {
+        background-position: 250% 0;
+        opacity: 1;
+    }
+    100% {
+        background-position: -250% 0;
+        opacity: 1;
+    }
+}
+
+.shine-bg-fullb {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate; /* защищает содержимое */
+}
+
+.shine-bg-fullb::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+
+    background: linear-gradient(
+        115deg,
+        rgba(255, 255, 255, 0) 48%,
+        rgba(255, 255, 255, 0.85) 50%,
+        rgba(255, 255, 255, 0) 52%
+    );
+
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    background-position: 250% 0;
+
+    animation: backgroundShineFullButton 6s linear forwards;
+
+    pointer-events: none;
+    z-index: 0;
+    border-radius: inherit;
+}
+
+/* src/styles/diagonalStripeRight.css */
+.diagonal-stripe-right {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0.6%;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.diagonal-stripe-right::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%; /* Двойная высота */
+
+    background-image: repeating-linear-gradient(
+        225deg,
+        rgba(0, 123, 255, 0.4),
+        rgba(0, 123, 255, 0.4) 2.5px,
+        transparent 2.5px,
+        transparent 10px
+    );
+
+    animation: scrollUpLoop 300s linear infinite;
+    background-size: 100% 100%;
+}
+
+@keyframes scrollUpLoop {
+    0% {
+        transform: translateY(0%);
+    }
+    100% {
+        transform: translateY(-50%);
+    }
+}
